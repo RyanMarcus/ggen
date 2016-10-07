@@ -2,6 +2,7 @@ package edu.brandeis.ggen.graph;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
@@ -26,6 +27,12 @@ public class GGenGraph {
 		return toR;
 	}
 	
+	public List<Vertex> getSources() {
+		return vertices.values().stream()
+				.filter(v -> v.getParents().size() == 0)
+				.collect(Collectors.toList());
+	}
+	
 	private void parseAllGV(String gv) {
 		// remove all of the newlines
 		gv = gv.replaceAll("\n", "");
@@ -35,7 +42,6 @@ public class GGenGraph {
 		int endStmt = gv.indexOf('}');
 		
 		String statements = gv.substring(startStmt, endStmt);
-		System.out.println(statements);
 		Arrays.stream(statements.split(";")).forEach(this::parseStatement);
 	}
 	
