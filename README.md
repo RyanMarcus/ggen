@@ -29,7 +29,7 @@ You can add it from my personal Maven repo:
 			<name>RyanMarcus's Git based repo</name>
 			<url>https://github.com/RyanMarcus/maven-repo/raw/master/</url>
 		</repository>
-	</repositories>
+</repositories>
 
 <dependencies>
 	<dependency>
