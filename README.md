@@ -8,10 +8,8 @@ public static void main(String[] args) throws GGenException {
 
 	GGenGraph gg = GGen.staticGraph()
 			.cholesky(5)
-			.edgeProperty("weight")
-			.flat(0.0, 100.5)
-			.edgeProperty("weight2")
-			.pareto(1.0, 5.0)
+			.edgeProperty("weight").flat(0.0, 100.5)
+			.edgeProperty("weight2").pareto(1.0, 5.0)
 			.generateGraph();
 	
 	System.out.println("Sources: " + gg.getSources());
