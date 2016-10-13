@@ -18,3 +18,24 @@ public static void main(String[] args) throws GGenException {
 	System.out.println("As DOT: " + gg.toGraphviz());
 }
 ```
+
+
+You can add it from my personal Maven repo:
+
+```xml
+<repositories>
+		<repository>
+			<id>git-ryanmarcus</id>
+			<name>RyanMarcus's Git based repo</name>
+			<url>https://github.com/RyanMarcus/maven-repo/raw/master/</url>
+		</repository>
+	</repositories>
+
+<dependencies>
+	<dependency>
+		<groupId>edu.brandeis</groupId>
+		<artifactId>ggen4j</artifactId>
+		<version>0.0.1</version>
+	</dependency>
+</dependencies>
+```
