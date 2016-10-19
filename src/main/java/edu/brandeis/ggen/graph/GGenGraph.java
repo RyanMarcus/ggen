@@ -22,6 +22,7 @@
 package edu.brandeis.ggen.graph;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,6 +53,10 @@ public class GGenGraph {
 		return vertices.values().stream()
 				.filter(v -> v.getParents().size() == 0)
 				.collect(Collectors.toList());
+	}
+	
+	public Collection<Vertex> allVertices() {
+		return vertices.values();
 	}
 	
 	private void parseAllGV(String gv) {
