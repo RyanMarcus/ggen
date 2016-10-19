@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.brandeis</groupId>
 	<artifactId>ggen4j</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>ggen wrapper</name>
 	<description>A Java wrapper for the GGen command line graph generator</description>
 
