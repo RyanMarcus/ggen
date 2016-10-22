@@ -25,12 +25,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Vertex {
+	public Boolean visited;
 	private int id;
 	private Map<Vertex, Map<String, String>> children;
 	private Map<Vertex, Map<String, String>> parents;
 	private Map<String, String> props;
 	
 	Vertex(int num) {
+		this.visited = false;
 		this.id = num;
 		children = new HashMap<>();
 		parents = new HashMap<>();
