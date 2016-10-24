@@ -19,15 +19,20 @@
 // { end copyright } 
  
  
-package edu.brandeis.ggen;
+package info.rmarcus.ggen4j;
 
-public class GGenException extends Exception {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	public GGenException(String s) {
-		super(s);
+public class GGen {
+	
+	private static RandomGraphGenerator rgg = new RandomGraphGenerator();
+	private static StaticGraphGenerator sgg = new StaticGraphGenerator();
+	
+	public static RandomGraphGenerator generateGraph() {
+		return rgg;
 	}
+	
+	public static StaticGraphGenerator staticGraph() {
+		return sgg;
+	}
+	
+	
 }

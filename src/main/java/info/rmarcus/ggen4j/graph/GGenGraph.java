@@ -19,7 +19,7 @@
 // { end copyright } 
  
  
-package edu.brandeis.ggen.graph;
+package info.rmarcus.ggen4j.graph;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -29,8 +29,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import edu.brandeis.ggen.GGenException;
-import edu.brandeis.ggen.GraphGenerator;
+import info.rmarcus.ggen4j.GGenException;
+import info.rmarcus.ggen4j.GraphGenerator;
 
 public class GGenGraph {
 	

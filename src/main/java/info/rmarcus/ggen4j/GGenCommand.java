@@ -19,7 +19,7 @@
 // { end copyright } 
  
  
-package edu.brandeis.ggen;
+package info.rmarcus.ggen4j;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

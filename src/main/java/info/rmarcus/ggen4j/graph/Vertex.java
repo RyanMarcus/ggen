@@ -19,7 +19,7 @@
 // { end copyright } 
  
  
-package edu.brandeis.ggen.graph;
+package info.rmarcus.ggen4j.graph;
 
 import java.util.HashMap;
 import java.util.Map;

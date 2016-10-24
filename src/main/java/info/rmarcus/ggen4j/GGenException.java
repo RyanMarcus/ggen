@@ -19,23 +19,15 @@
 // { end copyright } 
  
  
-package edu.brandeis.ggen;
+package info.rmarcus.ggen4j;
 
-import edu.brandeis.ggen.graph.GGenGraph;
+public class GGenException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-public abstract class GraphGenerator {
-	public abstract String generateGraphviz() throws GGenException;
-	
-	public GGenGraph generateGraph() throws GGenException {
-		return GGenGraph.fromGGen(this);
+	public GGenException(String s) {
+		super(s);
 	}
-	
-	public PropertyGenerator edgeProperty(String name) {
-		return new PropertyGenerator(this, name, true);
-	}
-	
-	public PropertyGenerator vertexProperty(String name) {
-		return new PropertyGenerator(this, name, false);
-	}
-
 }

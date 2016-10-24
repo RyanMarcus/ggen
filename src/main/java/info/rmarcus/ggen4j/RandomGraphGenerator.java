@@ -19,7 +19,7 @@
 // { end copyright } 
  
  
-package edu.brandeis.ggen;
+package info.rmarcus.ggen4j;
 
 public class RandomGraphGenerator {
 	public GraphGenerator erdosGNP(int numVertices, double p) {
