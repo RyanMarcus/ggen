@@ -42,7 +42,7 @@ public class GGenGraph {
 	
 	public static GGenGraph fromGGen(GraphGenerator gg) throws GGenException {
 		String graphviz = gg.generateGraphviz();
-		
+			
 		GGenGraph toR = new GGenGraph();
 		toR.parseAllGV(graphviz);
 		
@@ -121,7 +121,7 @@ public class GGenGraph {
 	}
 	
 	private void parseVertex(String stmt, Map<String,String> props) {
-		int v = Integer.valueOf(stmt);
+		int v = Integer.valueOf(stmt.trim());
 		Vertex ver1 = getOrCreateVertex(v);
 		ver1.noteProperties(props);
 	}

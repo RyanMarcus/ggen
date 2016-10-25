@@ -22,12 +22,17 @@
 package info.rmarcus.ggen4j;
 
 public class RandomGraphGenerator {
+	
+	RandomGraphGenerator() {
+		
+	}
+	
 	public GraphGenerator erdosGNP(int numVertices, double p) {
 		return new GGenCommand("generate-graph gnp " + numVertices + " " + p);
 	}
 	
-	public GraphGenerator erdosGNM(int numVertices, double p) {
-		return new GGenCommand("generate-graph gnm " + numVertices + " " + p);
+	public GraphGenerator erdosGNM(int numVertices, int numEdges) {
+		return new GGenCommand("generate-graph gnm " + numVertices + " " + numEdges);
 	}
 	
 	public GraphGenerator layerByLayer(int numVertices, int numLayers, double p) {
