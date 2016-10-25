@@ -29,7 +29,7 @@ import java.util.List;
 
 import org.apache.commons.io.IOUtils;
 
-class GGenCommand extends GraphGenerator {
+public class GGenCommand extends GraphGenerator {
 
 	public static String GGEN_PATH = "ggen";
 

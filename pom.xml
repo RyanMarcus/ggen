@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>info.rmarcus</groupId>
 	<artifactId>ggen4j</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<name>ggen wrapper</name>
 	<description>A Java wrapper for the GGen command line graph generator</description>
 	<url>https://github.com/RyanMarcus/ggen4j</url>
@@ -105,4 +105,13 @@
 		</dependency>
 
 	</dependencies>
+
+	<developers>
+		<developer>
+			<id>RyanMarcus</id>
+			<name>Ryan Marcus</name>
+			<email>ryan@rmarcus.info</email>
+			<url>https://rmarcus.info</url>
+		</developer>
+	</developers>
 </project>
