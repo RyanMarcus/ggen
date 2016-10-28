@@ -30,7 +30,7 @@ public class Vertex {
 	private Map<Vertex, Map<String, String>> parents;
 	private Map<String, String> props;
 	
-	Vertex(int num) {
+	public Vertex(int num) {
 		this.id = num;
 		children = new HashMap<>();
 		parents = new HashMap<>();

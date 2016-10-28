@@ -26,7 +26,7 @@ public class PropertyGenerator {
 	private GraphGenerator input;
 	private String name;
 	
-	PropertyGenerator(GraphGenerator input, String name, boolean edge) {
+	public PropertyGenerator(GraphGenerator input, String name, boolean edge) {
 		if (edge)
 			this.mode = "edge";
 		else

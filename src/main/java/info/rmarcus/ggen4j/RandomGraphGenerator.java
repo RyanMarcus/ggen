@@ -22,8 +22,8 @@
 package info.rmarcus.ggen4j;
 
 public class RandomGraphGenerator {
-	
-	RandomGraphGenerator() {
+
+	public RandomGraphGenerator() {
 		
 	}
 	
