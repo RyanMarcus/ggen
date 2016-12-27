@@ -30,14 +30,28 @@ public class Vertex {
 	private Map<Vertex, Map<String, String>> parents;
 	private Map<String, String> props;
 	
+	int topoOrder;
+	
 	public Vertex(int num) {
 		this.id = num;
 		children = new HashMap<>();
 		parents = new HashMap<>();
+		this.topoOrder = -1;
 	}
 	
 	public int getID() {
 		return id;
+	}
+	
+	/**
+	 * Returns the topological sort index of this vertex, if -1 if no topo
+	 * sort was requested.
+	 * 
+	 * @return the topo sort order
+	 */
+	public int getTopographicalOrder() {
+		return topoOrder;
+		
 	}
 	
 	public Map<Vertex, Map<String, String>> getChildren() {

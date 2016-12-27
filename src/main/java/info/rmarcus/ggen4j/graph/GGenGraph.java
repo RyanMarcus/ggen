@@ -27,6 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import info.rmarcus.ggen4j.GGenException;
@@ -148,6 +149,25 @@ public class GGenGraph {
 		return sb.toString();
 	}
 	
+	public GGenGraph topoSort() {
+		int value = 0;
+		while (true) {
+			// find an unordered vertex that has no neighbors with topoOrder == -1
+			Optional<Vertex> nxt = vertices.values().stream()
+			.filter(v -> v.getTopographicalOrder() == -1)
+			.filter(v -> v.getParents().keySet().stream().allMatch(p -> p.getTopographicalOrder() != -1))
+			.findAny();
+			
+			if (!nxt.isPresent())
+				break;
+			
+			nxt.get().topoOrder = value++;
+		}
+		
+		return this;
+	}
+	
+		
 	public String toGraphviz() {
 		StringBuilder sb = new StringBuilder();
 		
