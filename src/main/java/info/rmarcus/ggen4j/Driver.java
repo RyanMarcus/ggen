@@ -27,7 +27,7 @@ public class Driver {
 	public static void main(String[] args) throws GGenException {
 		GGenCommand.GGEN_PATH = "/home/ryan/local/bin/ggen";
 
-		GGenGraph gg = GGen.generateGraph().erdosGNM(20, 10).generateGraph().topoSort();
+		GGenGraph gg = GGen.dataflowGraph().cholesky(10).generateGraph().topoSort();
 
 		System.out.println("Sources: " + gg.getSources());
 		System.out.println("As DOT: " + gg.toGraphviz());

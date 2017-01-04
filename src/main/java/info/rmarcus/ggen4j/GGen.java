@@ -25,6 +25,7 @@ public class GGen {
 	
 	private static RandomGraphGenerator rgg = new RandomGraphGenerator();
 	private static StaticGraphGenerator sgg = new StaticGraphGenerator();
+	private static DataflowGraphGenerator dgg = new DataflowGraphGenerator();
 	
 	public static RandomGraphGenerator generateGraph() {
 		return rgg;
@@ -32,6 +33,10 @@ public class GGen {
 	
 	public static StaticGraphGenerator staticGraph() {
 		return sgg;
+	}
+	
+	public static DataflowGraphGenerator dataflowGraph() {
+		return dgg;
 	}
 	
 	
